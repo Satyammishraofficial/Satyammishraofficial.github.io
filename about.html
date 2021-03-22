@@ -1,0 +1,532 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>About Me</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/animate.css">
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!--Font Awesome Tool kit-->
+    <script src="https://kit.fontawesome.com/90c1850459.js" crossorigin="anonymous"></script>
+    <!--End of Tool kit-->
+
+
+    <style type="text/css">
+    
+    /*Preloader css*/
+
+    .loader_bg{
+    	position: fixed;
+    	z-index: 999999;
+    	background:#fff;
+    	width: 100%;
+    	height: 100%;
+    }
+    .loader{
+    	border:0 solid transparent;
+    	border-radius: 50%;
+    	width: 150px;
+    	height: 150px;
+    	position: absolute;
+    	top: calc(50vh - 75px);
+    	left: calc(50vw - 75px);
+    }
+    .loader:before, .loader:after{
+        content: '';
+        border:1em solid #ff5733;
+        border-radius: 50%;
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: loader 2s linear infinite;
+        opacity: 0;     
+    }
+    .loader:before{
+    	animation-delay: .5s;
+    }
+    @keyframes loader{
+    	0%{
+    		transform: scale(0);
+    		opacity: 0;
+    	}
+    	50%{
+    		opacity: 1;
+    	}
+    	100%{
+    		transform: scale(1);
+    		opacity: 0;
+    	}
+    }
+
+
+    /*end of Preloader*/
+    	
+    html{
+        scroll-behavior: smooth;
+     }
+  	
+  	*{
+  		margin:0;
+  		padding:0;
+  		box-sizing: border-box;
+      font-family: 'Muli', sans-serif;
+      font-family: 'Sen', sans-serif;
+  		
+  	}b
+  	.nav-item{
+  		font-weight: 500;
+  		text-align: center;
+  		font-size: 18px;
+  		
+  	}
+  	.active, ul li:hover{
+        border-top: 1px solid #5dade2;
+        border-bottom: 1px solid #5dade2;
+  	}
+    .header{
+      background-color: #0c63b9;
+      background-image: linear-gradient(62deg, #0c63b9 0%, #9d5ddc 100%);
+      height: 100vh;
+      width: 100%;
+    }
+    .header_content h3{
+      padding-top: 190px;
+      font-size: 45px;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+    .header_content p{
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+    .header_content .btn{
+      border-radius:  20px;
+    }
+    .header_content .btn:hover{
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .icon_language i {
+      padding: 8px;
+    }
+    .header h4{
+      text-shadow: 1px 0 yellow, 0 1px black, 1px 0 black, 0 1px black;
+
+    }
+    .section{
+      height: 80vh;
+      width: 100%;
+    }
+    .section img{
+      height: 300px;
+
+    }
+    .services{
+      
+      height: 60vh;
+      width: 100%;
+      text-align: center;
+        
+    }
+    .services h3{
+        color: #d43377;
+    }
+    .services_col1 .card{
+        height: 200px;
+        border:1px solid #d43377;
+    }
+    .services_col1 .card:hover{
+        padding-top:8px;
+        border:2px solid #d43377;
+    }
+    .services_col2 .card{
+      height: 200px;
+      border:1px solid #d43377;
+    }
+    .services_col2 .card:hover{
+        padding-top:8px;
+        border:2px solid #d43377;
+    }
+    .services_col3 .card{
+      height: 200px;
+      border:1px solid #d43377;
+    }
+    .services_col3 .card:hover{
+        padding-top:8px;
+        border:2px solid #d43377;
+    }
+    .footer{
+        height: 80vh;
+        background: #282828;
+        clip-path: polygon(38% 0, 100% 11%, 100% 100%, 0 100%, 0 12%);
+      }
+    .social_icon{
+      width: 100%;
+    }
+
+    .fa_icons .fa{
+      height: 38px;
+      width: 38px;
+      color:#fff;
+      margin:5px;
+      border-radius: 50px;
+      box-shadow: 1px 1px 2px 2px #dcdde1;
+      line-height: 40px;
+      font-weight: ;
+    }
+    .footer_row{
+        padding-top: 150px;
+        list-style: none;
+        text-align: center;
+    }
+    .footer_row a{
+        text-decoration: none;
+        color:#fff;
+    }
+    .footer_row p{
+        font-size: 20px;
+    }
+    .footer_row li{
+        padding:4px;
+    }
+    .menu_col2 li a:hover{
+      color: yellow;
+      font-style: italic;
+    }
+    .menu_col3 a:hover{
+      color: yellow;
+      font-style: italic;
+    }
+    .copy_content:before{
+      content: '';
+      background: #d43377;
+      display: block;
+      width: 100px;
+      height: 3px;
+      margin:10px auto;
+    }
+    .whatsapp_icon{
+      position: fixed;
+      top:600px;
+      left:1180px;
+      
+    }
+    
+
+
+
+
+     /*Media Query*/
+
+     /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+
+    @media (max-width: 768px) { 
+    .header{
+      height: 850px;
+    }
+           
+    .header_content h3{
+      font-size:32px;
+  
+    }
+    .services{
+        height: 820px;
+        width: 100%;
+        margin-top: 25px;
+        margin-top: 340px;
+        
+      } 
+    .services_col2{
+        padding:35px 0;
+            
+
+        }
+        .footer{
+          height: 965px;
+        }
+        .footer_row{
+          padding-top: 140px;
+        }
+        .menu_col2{
+          padding-top: 30px;
+        }
+        .menu_col3{
+          padding-top: 30px;
+        }
+                  
+     }
+
+
+      
+    </style>
+</head>
+<body>
+
+    <!--Preloader -->
+
+        <div class="loader_bg">
+
+          <div class="loader"></div>
+
+        </div>
+
+    <!--END of preloader-->
+
+    <!--Call icon side of webpage-->
+        
+        
+
+    <!--End of call icon page-->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+<div class="container">
+  <a class="navbar-brand" href="index.php"><img src="image/logo5.png" style="height: 60px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project.html">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="article.html">ARTICLE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+          <li class="nav-item bg-warning">
+            <a class="nav-link" href="MySKresume.pdf"><b>RESUME</b></a>
+          </li>
+      </ul>
+  </div>
+</div>
+</nav>
+<div class="header">
+  <div class="container">
+  <div class="header_content text-center">
+    <h3 class="text-white"><b><span class="text-warning"><u>A</u></span></b>bout Me</h3>
+    <p class="text-white text-center pt-4">Hi, this is <span class="text-warning">Satyam Mishra</span>, a Freelance Web Developer in Allahabad, India.<br> I create Dynamic and Responsive Website, usually with..</p>
+    <div class="text-center text-white pt-3 icon_language">
+      <i class="fab fa-2x fa-html5"></i>
+      <i class="fab fa-2x fa-css3-alt"></i>
+      <i class="fab fa-2x fa-js"></i>
+      <i class="fab fa-2x fa-bootstrap"></i>
+      <i class="fab fa-2x fa-wordpress"></i>
+      <i class="fab fa-2x fa-php"></i>
+      <i class="fa fa-2x fa-database"></i>
+      <i class="fas fa-2x fa-code"></i>
+    </div>
+    <h4 class="pt-5 text-white wow swing">LETS MAKE YOUR BUSINESS LOOK GOOD!</h4>
+    <a href="#" class="btn bg-white text-danger btn-small mt-5">View Project</a>&emsp; &emsp;
+    <a href="#" class="btn bg-white text-danger btn-small mt-5">Start Your Project</a>
+  </div>
+  </div>
+</div>
+<div class="section text-center mt-5">
+  <div class="container">   
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <img src="image/section_about.jpg" class="img-fluid rounded-circle mt-5 wow fadeInLeft"><br>
+        <a href="MySKresume.pdf" class="btn btn-small btn-warning mt-4 font-weight-bold">Download Resume</a>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <h3 class="pt-5 font-weight-bold text-danger wow swing"><u><b>Skill</b></u></h3>
+        <div class="progress mt-4">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"><b>HTML5</b>
+        </div>
+        </div><br>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"><b>CSS3</b></div>
+        </div><br>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><b>JAVASCRIPT</b>
+        </div>
+        </div><br>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"><b>BOOTSTRAP4</b>
+        </div>
+        </div><br>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"><b>WORDPRESS</b>
+        </div>
+        </div><br>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><b>PHP7</b>
+        </div>
+        </div><br>
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><b>MYSQL</b>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Services Section-->
+<div class="services">
+    <h2 class="text-danger wow swing"><b><u>Services</u></b></h2>
+    <div class="container">
+    <div class="row text-center pt-5">
+        <div class="col-lg-4 col-md-4 col-12 services_col1 col d-flex justify-content-center">
+          <div class="card wow fadeInUp" style="width: 18rem;">
+            <div class="card-body">
+          <h3 class="card-title">Web Design</h3>    
+          <p class="card-text">Responsive Design, Web Layout Design, UI & UX Design, Prototype Design, Mobile Site Design.</p>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 services_col2 col d-flex justify-content-center">
+          <div class="card wow fadeInUp" style="width: 18rem;">
+            <div class="card-body">
+          <h3 class="card-title">Web Development</h3>    
+          <p class="card-text">Website Development, Web Applications, Open Source Solutions, PHP Development.</p>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 services_col3 col d-flex justify-content-center">
+          <div class="card wow fadeInUp" style="width: 18rem;">
+            <div class="card-body">
+          <h3 class="card-title">Maintainance</h3>    
+          <p class="card-text">Content Updates, Product Updates, Data Entries Files & Data Backup, Yearly Maintainance.</p>
+          </div>
+          </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- End of Services Section-->
+<div class="quick_connect text-center pt-5" style="height: 50vh; background:skyblue;">
+  <div class="container">
+    <h3 class="text-danger wow swing"><b><u>Click Here For Quick Response</u></b></h3>
+    <div class="quick icon pt-5">
+      <a href="https://api.whatsapp.com/send?phone=+91 9794045637" class="btn btn-lg">
+      <i class="fa fa-4x fa-whatsapp btn  text-white rounded-circle" style="background-color:#25D366; font-weight: bold;" aria-hidden="true"></i>
+      </a>
+      <a href="tel:9794045637" class="btn btn-lg">
+      <i class="fa fa-4x fa-phone btn  text-white rounded-circle" style="background-color:grey; font-weight: bold;" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!--Footer-->
+<div class="footer mt-5">
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row footer_row text-white">
+        <div class="col-lg-4 col-md-4 col-12 text-center">
+        
+          <div class="fb-page" data-href="https://www.facebook.com/Satyam1821389/?modal=admin_todo_tour" data-tabs="timeline" data-width="300" data-height="100" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Satyam1821389/?modal=admin_todo_tour" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Satyam1821389/?modal=admin_todo_tour">Satyam Mishra</a></blockquote></div>
+          
+          <h4 class="pt-4">Keep in touch</h4>
+          <div class="fa_icons pt-2">
+                <a href="#">
+                  <i class="fa fa-facebook" style="background-color: #3b5998;" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa  fa-instagram" style="background-color:#c13584; 
+                  color:#fff; font-weight:bold;" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa  fa-twitter" style="background:#1DA1F2; color:#fff;"  aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa  fa-linkedin" style="background:#0077b5; color: #fff;" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa  fa-github" style="background-color:#6cc644; font-weight: bold;" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa  fa-youtube-play" style="background-color:#FF0000; font-weight: bold;" aria-hidden="true"></i>
+                </a>
+                
+
+           </div>
+ 
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 menu_col2">
+          <p><u>MENU</u></p>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="project.html">PROJECT</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="contact.html">HIRE ME</a></li>
+          <li><a href="proposal.html">PROPOSAL</a></li> 
+        </div>
+        <div class="col-lg-4 col-md-4 col-12 menu_col3">
+          <p><u>CONTACT</u></p>
+          <div class="">
+          <i class="fa fa-envelope" style=" color: #fff;" aria-hidden="true"></i>
+          <a href="mailto:satyammishra1821389@gmail.com">satyammishra1821389@gmail.com</a>
+          </div>
+          <div class="pt-3">
+          <i class="fa fa-phone" style=" color: #fff;" aria-hidden="true"></i>
+           <a href="tel:9794045637">+91 9794045637 </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-5 copy_content text-center">
+
+          <p style="font-size:16px; color: #fff;">Copyright © 2020 Satyam Mishra | 🌐 Web Developer | </p>
+           
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--End Footer-->
+
+
+
+    
+
+    
+   <!--Prloader script-->
+
+    <script type="text/javascript">
+      
+         setTimeout(function(){
+          $('.loader_bg').fadeToggle();
+         }, 1500);
+
+    </script>
+   <!-- end of preloader script-->
+   <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+  <!--Facebook Plugin-->
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+  <!--Userlike widget -->
+  <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/db89be0e0df3333b3a9c81bc9c1018e077763b6a19213c3c847aa933214adc81.js"></script>
+
+    <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!--Waypoints-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha256-+izcH23qgte+aiGZRxk63BxGUyoQrAQZVoH2zKU9usM=" crossorigin="anonymous"></script> 
+</body>
+</html>
+       
